@@ -1,0 +1,19 @@
+---
+title: Management System
+---
+classDiagram
+    class User{
+        - userId : Long
+        - firstName : String
+        - lastName : String
+        - age : int
+        - email : String
+        - password : String
+        
+        + getUserId() Long
+        + login(String email, String password) UserResponse
+        + createUser(UserRequest dto) UserResponse
+        + updateUser(Long id, UserRequest dto) UserResponse
+        + deleteUser(Long id) Boolean
+        + viewUser(Long id) UserResponse
+    }
